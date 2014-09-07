@@ -8,7 +8,7 @@ public class SampleActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(ademar.phasedseekbar.R.layout.sample_activity);
+        setContentView(R.layout.sample_activity);
     }
 
 }
