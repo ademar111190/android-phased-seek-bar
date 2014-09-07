@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <ademar.playground.PhasedSeekBar
+    <ademar.phasedseekbar.PhasedSeekBar
         android:id="@+id/psb_hor"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -24,7 +24,7 @@
         app:phased_item_width="@dimen/test_item_size"
         app:phased_mode="horizontal"/>
 
-    <ademar.playground.PhasedSeekBar
+    <ademar.phasedseekbar.PhasedSeekBar
         android:id="@+id/psb_like"
         android:layout_width="100dp"
         android:layout_height="match_parent"
@@ -43,7 +43,7 @@
         app:phased_item_width="80dp"
         app:phased_mode="vertical"/>
 
-    <ademar.playground.PhasedSeekBar
+    <ademar.phasedseekbar.PhasedSeekBar
         android:id="@+id/psb_star"
         android:layout_width="100dp"
         android:layout_height="match_parent"
@@ -63,7 +63,7 @@
         app:phased_item_width="80dp"
         app:phased_mode="vertical"/>
 
-    <ademar.playground.PhasedSeekBar
+    <ademar.phasedseekbar.PhasedSeekBar
         android:id="@+id/psb_no_images"
         android:layout_width="100dp"
         android:layout_height="match_parent"
