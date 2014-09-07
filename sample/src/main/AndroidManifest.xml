@@ -1,5 +1,5 @@
 <manifest
-    package="ademar.phasedseekbar"
+    package="ademar.phasedseekbar.sample"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
