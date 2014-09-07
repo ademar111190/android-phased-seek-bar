@@ -9,7 +9,6 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -123,7 +122,6 @@ public class PhasedSeekBar extends View {
             int minDistance = Integer.MAX_VALUE;
             for (int i = 0; i < count; i++) {
                 distance = Math.abs(mModeIsHorizontal ? mAnchors[i][0] - mCurrentX : mAnchors[i][1] - mCurrentY);
-                Log.d("", i + " : " + distance);
                 if (minDistance > distance) {
                     minIndex = i;
                     minDistance = distance;
