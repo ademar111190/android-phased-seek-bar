@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PhasedSeekBar">
+        <attr name="phased_mode">
+            <enum name="horizontal" value="1"/>
+            <enum name="vertical" value="2"/>
+        </attr>
+        <attr name="phased_base_margin_left" format="dimension|reference"/>
+        <attr name="phased_base_margin_right" format="dimension|reference"/>
+        <attr name="phased_base_margin_top" format="dimension|reference"/>
+        <attr name="phased_base_margin_bottom" format="dimension|reference"/>
+        <attr name="phased_base_background" format="color|reference"/>
+        <attr name="phased_item_width" format="dimension|reference"/>
+        <attr name="phased_item_height" format="dimension|reference"/>
+        <attr name="phased_anchor_width" format="dimension|reference"/>
+        <attr name="phased_anchor_height" format="dimension|reference"/>
+        <attr name="phased_draw_on_off" format="boolean"/>
+        <attr name="phased_fix_point" format="boolean"/>
+    </declare-styleable>
+
+</resources>
