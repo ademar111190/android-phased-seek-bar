@@ -9,6 +9,10 @@ Preview
 =======
 ![preview](https://raw.githubusercontent.com/ademar111190/android-phased-seek-bar/master/images/sample.gif)
 
+License
+============
+GNU Lesser General Public License at version 3, more details at LICENSE
+
 
 Developed By
 ============
