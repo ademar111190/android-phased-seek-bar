@@ -9,6 +9,26 @@ Preview
 =======
 ![preview](https://raw.githubusercontent.com/ademar111190/android-phased-seek-bar/master/images/sample.gif)
 
+How to
+============
+
+1. Add the [jitpack.io](https://jitpack.io/)
+
+```
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+```
+
+2. Add the phased seek bar
+
+```
+compile 'com.github.ademar111190:android-phased-seek-bar:0.1.1'
+```
+
+
 License
 ============
 GNU Lesser General Public License at version 3, more details at LICENSE
