@@ -3,8 +3,11 @@ package ademar.phasedseekbar.sample;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
+import ademar.phasedseekbar.PhasedInteractionListener;
 import ademar.phasedseekbar.PhasedListener;
 import ademar.phasedseekbar.PhasedSeekBar;
 import ademar.phasedseekbar.SimplePhasedAdapter;
@@ -48,6 +51,13 @@ public class SampleActivity extends ActionBarActivity {
                 psbLike.setVisibility(position == 0 ? View.VISIBLE : View.INVISIBLE);
                 psbStar.setVisibility(position == 1 ? View.VISIBLE : View.INVISIBLE);
                 psbNoImages.setVisibility(position == 2 ? View.VISIBLE : View.INVISIBLE);
+            }
+        });
+
+        psbHorizontal.setInteractionListener(new PhasedInteractionListener() {
+            @Override
+            public void onInteracted(int x, int y, int position, MotionEvent motionEvent) {
+                Log.d("PSB", String.format("onInteracted %d %d %d %d", x, y, position, motionEvent.getAction()));
             }
         });
 

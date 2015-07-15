@@ -19,21 +19,26 @@ public class PhasedSeekBar extends View {
     protected static final int[] STATE_PRESSED = new int[] { android.R.attr.state_pressed };
 
     protected int[] mState = STATE_SELECTED;
+
     protected boolean mModeIsHorizontal = true;
     protected boolean mFirstDraw = true;
     protected boolean mUpdateFromPosition = false;
     protected boolean mDrawOnOff = true;
     protected boolean mFixPoint = true;
+
     protected Drawable mBackgroundDrawable;
     protected RectF mBackgroundPaddingRect;
+
     protected int mCurrentX, mCurrentY;
     protected int mPivotX, mPivotY;
     protected int mItemHalfWidth, mItemHalfHeight;
     protected int mItemAnchorHalfWidth, mItemAnchorHalfHeight;
     protected int[][] mAnchors;
     protected int mCurrentItem;
+
     protected PhasedAdapter mAdapter;
     protected PhasedListener mListener;
+    protected PhasedInteractionListener mInteractionListener;
 
     public PhasedSeekBar(Context context) {
         super(context);
@@ -169,9 +174,13 @@ public class PhasedSeekBar extends View {
         mCurrentY = !mModeIsHorizontal ? getNormalizedY(event) : mPivotY;
         int action = event.getAction();
         mUpdateFromPosition = mFixPoint && action == MotionEvent.ACTION_UP;
-        mState = action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL
-                ? STATE_SELECTED : STATE_PRESSED;
+        mState = action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL ? STATE_SELECTED : STATE_PRESSED;
         invalidate();
+
+        if (mInteractionListener != null) {
+            mInteractionListener.onInteracted(mCurrentX, mCurrentY, mCurrentItem, event);
+        }
+
         switch (action) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_UP:
@@ -202,6 +211,10 @@ public class PhasedSeekBar extends View {
 
     public void setListener(PhasedListener listener) {
         mListener = listener;
+    }
+
+    public void setInteractionListener(PhasedInteractionListener interactionListener) {
+        mInteractionListener = interactionListener;
     }
 
     public void setPosition(int position) {
