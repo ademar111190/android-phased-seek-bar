@@ -15,9 +15,10 @@ import android.view.View;
 public class PhasedSeekBar extends View {
 
     protected static final int[] STATE_NORMAL = new int[] {};
-    protected static final int[] STATE_SELECTED = new int[] {android.R.attr.state_selected};
+    protected static final int[] STATE_SELECTED = new int[] { android.R.attr.state_selected };
+    protected static final int[] STATE_PRESSED = new int[] { android.R.attr.state_pressed };
+
     protected int[] mState = STATE_SELECTED;
-    protected static final int[] STATE_PRESSED = new int[] {android.R.attr.state_pressed};
     protected boolean mModeIsHorizontal = true;
     protected boolean mFirstDraw = true;
     protected boolean mUpdateFromPosition = false;

@@ -28,19 +28,19 @@ public class SampleActivity extends ActionBarActivity {
         psbHorizontal.setAdapter(new SimplePhasedAdapter(resources, new int[] {
                 R.drawable.btn_square_selector,
                 R.drawable.btn_triangle_selector,
-                R.drawable.btn_xis_selector}));
+                R.drawable.btn_xis_selector }));
 
         psbLike.setAdapter(new SimplePhasedAdapter(resources, new int[] {
                 R.drawable.btn_like_selector,
-                R.drawable.btn_unlike_selector}));
+                R.drawable.btn_unlike_selector }));
         psbStar.setAdapter(new SimplePhasedAdapter(resources, new int[] {
                 R.drawable.btn_star1_selector,
                 R.drawable.btn_star2_selector,
                 R.drawable.btn_star3_selector,
                 R.drawable.btn_star4_selector,
-                R.drawable.btn_star5_selector}));
+                R.drawable.btn_star5_selector }));
         psbNoImages.setAdapter(new SimplePhasedAdapter(resources, new int[] {
-                R.drawable.no_image_shape}));
+                R.drawable.no_image_shape }));
 
         psbHorizontal.setListener(new PhasedListener() {
             @Override

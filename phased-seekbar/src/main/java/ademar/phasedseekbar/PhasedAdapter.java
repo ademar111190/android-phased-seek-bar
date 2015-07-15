@@ -4,8 +4,8 @@ import android.graphics.drawable.StateListDrawable;
 
 public interface PhasedAdapter {
 
-    public int getCount();
+    int getCount();
 
-    public StateListDrawable getItem(int position);
+    StateListDrawable getItem(int position);
 
 }
