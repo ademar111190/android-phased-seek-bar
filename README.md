@@ -3,7 +3,7 @@ Android phased seek bar
 
 android phased seek bar allow create a seek bar with predefined states.
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-android--phased--seek--bar-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/919)
+[![](https://jitpack.io/v/ademar111190/android-phased-seek-bar.svg)](https://jitpack.io/#ademar111190/android-phased-seek-bar) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-android--phased--seek--bar-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/919)
 
 Preview
 =======
