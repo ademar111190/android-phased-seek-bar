@@ -9,6 +9,16 @@ android {
         targetSdkVersion 23
         versionCode 3
         versionName '0.1.2'
+        resConfigs 'en'
+    }
+
+    buildTypes {
+        all {
+            shrinkResources true
+            minifyEnabled true
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            proguardFile 'proguard-rules.pro'
+        }
     }
 }
 
