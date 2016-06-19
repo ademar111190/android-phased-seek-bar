@@ -17,7 +17,7 @@ How to
 ```
 repositories {
     maven {
-        url "https://jitpack.io"
+        url 'https://jitpack.io'
     }
 }
 ```
@@ -25,16 +25,10 @@ repositories {
 2. Add the phased seek bar
 
 ```
-compile 'com.github.ademar111190:android-phased-seek-bar:0.1.1'
+compile 'com.github.ademar111190:android-phased-seek-bar:0.1.2'
 ```
 
 
 License
 ============
 GNU Lesser General Public License at version 3, more details at LICENSE
-
-
-Developed By
-============
-
-* Ademar Oliveira - <ademar111190@gmail.com>
