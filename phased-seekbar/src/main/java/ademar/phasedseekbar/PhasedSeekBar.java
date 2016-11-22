@@ -39,6 +39,7 @@ public class PhasedSeekBar extends View {
     protected PhasedAdapter mAdapter;
     protected PhasedListener mListener;
     protected PhasedInteractionListener mInteractionListener;
+    protected boolean isEnabled = true;
 
     public PhasedSeekBar(Context context) {
         super(context);
@@ -170,23 +171,36 @@ public class PhasedSeekBar extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        mCurrentX = mModeIsHorizontal ? getNormalizedX(event) : mPivotX;
-        mCurrentY = !mModeIsHorizontal ? getNormalizedY(event) : mPivotY;
-        int action = event.getAction();
-        mUpdateFromPosition = mFixPoint && action == MotionEvent.ACTION_UP;
-        mState = action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL ? STATE_SELECTED : STATE_PRESSED;
-        invalidate();
+        if(isEnabled()) {
+            mCurrentX = mModeIsHorizontal ? getNormalizedX(event) : mPivotX;
+            mCurrentY = !mModeIsHorizontal ? getNormalizedY(event) : mPivotY;
+            int action = event.getAction();
+            mUpdateFromPosition = mFixPoint && action == MotionEvent.ACTION_UP;
+            mState = action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL ? STATE_SELECTED : STATE_PRESSED;
+            invalidate();
 
-        if (mInteractionListener != null) {
-            mInteractionListener.onInteracted(mCurrentX, mCurrentY, mCurrentItem, event);
-        }
+            if (mInteractionListener != null) {
+                mInteractionListener.onInteracted(mCurrentX, mCurrentY, mCurrentItem, event);
+            }
 
-        switch (action) {
-            case MotionEvent.ACTION_DOWN:
-            case MotionEvent.ACTION_UP:
-                return true;
+            switch (action) {
+                case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_UP:
+                    return true;
+            }
+            return super.onTouchEvent(event);
         }
-        return super.onTouchEvent(event);
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    @Override
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
     }
 
     protected int getNormalizedX(MotionEvent event) {
