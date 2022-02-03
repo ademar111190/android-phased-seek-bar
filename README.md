@@ -31,4 +31,4 @@ compile 'com.github.ademar111190:android-phased-seek-bar:0.1.2'
 
 License
 ============
-GNU Lesser General Public License at version 3, more details at LICENSE
+MIT License, more details at LICENSE
