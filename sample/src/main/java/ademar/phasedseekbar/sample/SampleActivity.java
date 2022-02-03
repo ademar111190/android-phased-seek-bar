@@ -2,17 +2,16 @@ package ademar.phasedseekbar.sample;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
+import androidx.appcompat.app.AppCompatActivity;
 import ademar.phasedseekbar.PhasedInteractionListener;
 import ademar.phasedseekbar.PhasedListener;
 import ademar.phasedseekbar.PhasedSeekBar;
 import ademar.phasedseekbar.SimplePhasedAdapter;
 
-public class SampleActivity extends ActionBarActivity {
+public class SampleActivity extends AppCompatActivity {
 
     protected PhasedSeekBar psbLike, psbStar, psbNoImages;
 
@@ -21,10 +20,10 @@ public class SampleActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_activity);
 
-        PhasedSeekBar psbHorizontal = (PhasedSeekBar) findViewById(R.id.psb_hor);
-        psbLike = (PhasedSeekBar) findViewById(R.id.psb_like);
-        psbStar = (PhasedSeekBar) findViewById(R.id.psb_star);
-        psbNoImages = (PhasedSeekBar) findViewById(R.id.psb_no_images);
+        PhasedSeekBar psbHorizontal = findViewById(R.id.psb_hor);
+        psbLike = findViewById(R.id.psb_like);
+        psbStar = findViewById(R.id.psb_star);
+        psbNoImages = findViewById(R.id.psb_no_images);
 
         final Resources resources = getResources();
 

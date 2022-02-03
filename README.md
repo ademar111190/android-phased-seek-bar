@@ -25,7 +25,7 @@ repositories {
 2. Add the phased seek bar
 
 ```
-compile 'com.github.ademar111190:android-phased-seek-bar:0.1.2'
+compile 'com.github.ademar111190:android-phased-seek-bar:1.0.0'
 ```
 
 
